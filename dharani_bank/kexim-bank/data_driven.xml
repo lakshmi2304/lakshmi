@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="data driven suite">
+	<parameter name="url" value="http://srssprojects.in"></parameter>
+	<test name="branch creation test">
+		<parameter name="brName" value="chrome"></parameter>
+		<classes>
+			<class name="in.srssprojects.kexim_bank.ParameterExecution">
+				<methods>
+					<include name="loginTest"></include>
+					<include name="logoutTest"></include>
+					<include name="branchCreationWithMultipleDataWODP"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="role creation test">
+		<parameter name="brName" value="firefox"></parameter>
+		<classes>
+			<class name="in.srssprojects.kexim_bank.ParameterExecution">
+				<methods>
+					<include name="loginTest"></include>
+					<include name="logoutTest"></include>
+					<include name="roleCreationWithMultipleData"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>  

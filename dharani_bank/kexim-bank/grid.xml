@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="grid suite" parallel="tests" thread-count="3">
+	<parameter name="url" value="http://srssprojects.in"></parameter>
+	<test name="dharani">
+		<parameter name="brName" value="firefox"></parameter>
+		<parameter name="nodeUrl" value="http://192.168.1.7:37733/wd/hub/"></parameter>
+		<groups>
+			<run>
+				<include name="employee"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="in.srssprojects.kexim_bank.GridExecution">
+			</class>
+		</classes>
+	</test>
+
+	<test name="lakshmi">
+	<parameter name="brName" value="firefox"></parameter>
+	<parameter name="nodeUrl" value="http://192.168.1.42:3522/wd/hub/"></parameter>
+		<groups>
+			<run>
+				<include name="role"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="in.srssprojects.kexim_bank.GridExecution">
+			</class>
+		</classes>
+	</test>
+	
+	<test name="surya">
+	<parameter name="brName" value="chrome"></parameter>
+	<parameter name="nodeUrl" value="http://192.168.1.19:22201/wd/hub/"></parameter>
+		<groups>
+			<run>
+				<include name="branch"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="in.srssprojects.kexim_bank.GridExecution">
+			</class>
+		</classes>
+	</test>
+</suite>  
