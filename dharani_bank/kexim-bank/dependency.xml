@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="dependency suite">
+	<test name="dependency test">
+		<groups>
+			<run>
+				<include name="cancel"></include>
+				<include name="reset"></include>
+			</run>
+			<dependencies>
+				<group depends-on="reset" name="cancel"></group>
+			</dependencies>
+
+		</groups>
+
+		<classes>
+			<class name="in.srssprojects.kexim_bank.BasicExecution">
+<!-- 				<methods> -->
+<!-- 					<include name="branchCreation"></include> -->
+<!-- 					<include name="branchCreationWithDuplicatedata"> -->
+<!-- 					</include> -->
+<!-- 				</methods> -->
+			</class>
+		</classes>
+	</test>
+</suite>  
